@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Context-Type"
+              context="text/html; charset=utf-8">
+        <title>Create advertising - Ad board</title>
+    </head>
+    <body>
+    <h1> Bboard </h1>
+    <div>
+        <a href="{% url 'index' %}"> Main </a>
+        {%  for rubric in rubrics %}
+        <a href="{%  url 'by_rubric' rubric.pk %}">
+            {{ rubrick.name }}
+        </a>
+        {% endfor %}
+    </div>
+    <form method="post">
+        {%  csrf_token %}
+        {{ form.as_p }}
+        <input type="submit" value="Add">
+    </form>
+    </body>
+
+</html>
