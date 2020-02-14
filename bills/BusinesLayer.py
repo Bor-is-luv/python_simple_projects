@@ -48,4 +48,5 @@ if __name__ == '__main__':
     sum_of_payment = CSVReader.sum_of_payment(platezhi)
     sort(platezhi, scheta)
     results = busines(platezhi, scheta)
-    XMLResult.WriteXML(results)
+    for result in results: print(result)
+    # XMLResult.WriteXML(results)
